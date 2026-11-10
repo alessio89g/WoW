@@ -1,0 +1,28 @@
+# Android and Gradle generated files
+.gradle/
+.kotlin/
+**/build/
+local.properties
+.idea/
+*.iml
+work/
+*.log
+*.apk
+*.aab
+*.pcap
+*.pcapng
+
+# Local secrets and signing material
+.env
+.env.*
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+*.cfg
+keystore.properties
+signing.properties
+id_rsa
+id_ed25519
