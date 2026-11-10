@@ -59,3 +59,7 @@ ANDROID_HOME=/path/to/android-sdk ./gradlew :app:assembleDebug :app:testDebugUni
 The JVM tests cover the UDP payload, local send and receive, input validation, legacy profile migration, credentials containing special characters, and command injection rejection. The SSH integration test requires the local test server and the `WOW_SSH_TEST_EVENTS` environment variable. Without the fixture, the test is explicitly skipped.
 
 Run the custom `SshSmokeInstrumentation` only on a development emulator with the local fixture. It tests Android Keystore, SSH authentication and commands, reading the server key before login, generating a non-exportable key, and authenticating with that key. The JVM signature tests check the SSH format against an independent Java verifier. The fixture rejects unauthorized client keys.
+
+## License
+
+The original WoW code and documentation are available under the [WoW Non-Commercial Source-Available License 1.1](LICENSE). Third-party components retain their own terms. See [credits](CREDITS) and the license texts under [app/src/main/assets/licenses](app/src/main/assets/licenses).

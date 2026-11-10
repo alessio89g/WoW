@@ -56,3 +56,7 @@ ANDROID_HOME=/percorso/android-sdk ./gradlew :app:assembleDebug :app:testDebugUn
 ```
 
 I test JVM verificano payload UDP, invio/ricezione locale, input, migrazione dei vecchi profili, credenziali con caratteri speciali e rifiuto dell'iniezione di comandi. Il test SSH d'integrazione richiede il server sintetico locale e la variabile WOW_SSH_TEST_EVENTS; altrimenti viene esplicitamente saltato. L'instrumentation personalizzata SshSmokeInstrumentation è destinata solo all'emulatore di sviluppo con fixture locale: prova Keystore, autenticazione/comando SSH e lettura della chiave del server di test senza login, generazione della chiave non esportabile e autenticazione con essa. I test JVM della firma confrontano il formato SSH con un verificatore Java indipendente; la fixture rifiuta chiavi client non autorizzate.
+
+## Licenza
+
+Il codice e la documentazione originali di WoW sono disponibili con la [licenza WoW Non-Commercial Source-Available 1.1](LICENSE). I componenti di terze parti mantengono le proprie licenze. Vedi i [crediti](CREDITS) e i testi in [app/src/main/assets/licenses](app/src/main/assets/licenses).
