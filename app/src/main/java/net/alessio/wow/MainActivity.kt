@@ -53,16 +53,22 @@ class MainActivity : ComponentActivity() {
             }
             CompositionLocalProvider(LocalWoWResources provides strings) {
                 MaterialExpressiveTheme(colorScheme=if(isSystemInDarkTheme()) darkColorScheme() else expressiveLightColorScheme()) {
-                    Home(italian) {
-                        italian = !italian
-                        preferences.edit().putBoolean("italian", italian).apply()
+                    UpdatePrompts(this@MainActivity) { checkUpdates ->
+                        AppMenu(
+                            italian = italian,
+                            setItalian = { selected ->
+                                italian = selected
+                                preferences.edit().putBoolean("italian", selected).apply()
+                            },
+                            checkUpdates = checkUpdates
+                        ) { openMenu -> Home(openMenu) }
                     }
                     if(showDeviceKeys) DeviceKeyDialog { showDeviceKeys=false }
                 }
             }
         }
     }
-    @Composable private fun Home(italian: Boolean, toggleLanguage: () -> Unit) {
+    @Composable private fun Home(openMenu: () -> Unit) {
         val initial=remember { runCatching { store.read() } }
         var targets by remember { mutableStateOf(initial.getOrDefault(emptyList())) }
         var editing by remember { mutableStateOf<Target?>(null) }
@@ -76,7 +82,7 @@ class MainActivity : ComponentActivity() {
         if(initial.isFailure) {
             Surface(Modifier.fillMaxSize()) {
                 Column(Modifier.safeDrawingPadding().padding(24.dp)) {
-                    LanguageButton(italian, toggleLanguage)
+                    MenuButton(openMenu)
                     Text(label(R.string.unreadable_profiles),style=MaterialTheme.typography.headlineMedium)
                     Text(label(R.string.unreadable_profiles_detail))
                 }
@@ -88,10 +94,10 @@ class MainActivity : ComponentActivity() {
         }) { padding ->
             LazyColumn(Modifier.fillMaxSize().padding(padding),contentPadding=PaddingValues(start=20.dp,end=20.dp,top=24.dp,bottom=110.dp),verticalArrangement=Arrangement.spacedBy(16.dp)) {
                 item {
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp),
                         verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                        MenuButton(openMenu)
                         Text("WoW",style=MaterialTheme.typography.displayLarge)
-                        LanguageButton(italian, toggleLanguage)
                     }
                     Text(label(R.string.tagline),style=MaterialTheme.typography.titleLarge)
                     TextButton(onClick={showDeviceKeys=true}) { Text(label(R.string.device_ssh_key)) }
@@ -157,13 +163,6 @@ class MainActivity : ComponentActivity() {
                 if(result.isSuccess) {targets=next} else snack.showSnackbar(strings.getString(R.string.remove_failed))
             }
         }){Text(label(R.string.remove))}},dismissButton={TextButton(onClick={deleting=null}){Text(label(R.string.cancel))}}) }
-    }
-}
-
-@Composable
-private fun LanguageButton(italian: Boolean, onClick: () -> Unit) {
-    OutlinedButton(onClick = onClick) {
-        Text(label(if (italian) R.string.language_en else R.string.language_it))
     }
 }
 

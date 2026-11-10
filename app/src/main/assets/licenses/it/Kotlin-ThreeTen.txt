@@ -1,0 +1,14 @@
+Traduzione italiana di cortesia. In caso di difformità fa fede il testo originale inglese.
+
+Copyright (c) 2007–oggi, Stephen Colebourne e Michael Nascimento Santos.
+Tutti i diritti riservati.
+
+La redistribuzione e l’uso in forma sorgente e binaria, con o senza modifiche, sono consentiti alle seguenti condizioni.
+
+1. Le redistribuzioni del codice sorgente devono conservare l’avviso di copyright sopra riportato, questo elenco di condizioni e la seguente esclusione di responsabilità.
+
+2. Le redistribuzioni in forma binaria devono riprodurre l’avviso di copyright sopra riportato, questo elenco di condizioni e la seguente esclusione di responsabilità nella documentazione o negli altri materiali forniti con la distribuzione.
+
+3. Il nome JSR-310 e i nomi dei suoi contributori non possono essere usati per avallare o promuovere prodotti derivati da questo software senza previa autorizzazione scritta specifica.
+
+Il software è fornito «così com’è». Si escludono tutte le garanzie espresse o implicite, comprese, a titolo esemplificativo, le garanzie implicite di commerciabilità e idoneità a uno scopo particolare. Il titolare del copyright e i contributori non rispondono di danni diretti, indiretti, incidentali, speciali, esemplari o consequenziali, inclusi l’acquisto di beni o servizi sostitutivi, la perdita di uso, dati o profitti e l’interruzione dell’attività, comunque causati e secondo qualsiasi teoria di responsabilità, contrattuale, oggettiva o extracontrattuale, inclusa la negligenza, derivanti dall’uso del software, anche se avvisati della possibilità di tali danni.

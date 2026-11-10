@@ -1,0 +1,9 @@
+Traduzione italiana di cortesia. In caso di difformità fa fede il testo originale inglese.
+
+Licenza MIT (https://opensource.org/licenses/MIT)
+
+Copyright (c) 2000–2026 The Legion of the Bouncy Castle Inc. (https://www.bouncycastle.org).
+
+A chiunque ottenga una copia di questo software e della relativa documentazione (il «Software») si concede gratuitamente il permesso di trattare il Software senza restrizioni, compresi, a titolo esemplificativo, i diritti di usare, copiare, modificare, unire, pubblicare, distribuire, concedere in sublicenza o vendere copie del Software e di permettere altrettanto a chi riceve il Software, alle seguenti condizioni. L’avviso di copyright sopra riportato e questo avviso di autorizzazione devono essere inclusi in tutte le copie o porzioni sostanziali del Software.
+
+Il Software è fornito «così com’è», senza garanzie di alcun tipo, espresse o implicite, comprese, a titolo esemplificativo, commerciabilità, idoneità a uno scopo particolare e non violazione di diritti. Gli autori e i titolari del copyright non rispondono di pretese, danni o altre responsabilità, contrattuali, extracontrattuali o di altra natura, derivanti dal Software, dal suo uso o da altre operazioni che lo riguardano, o connessi a essi.

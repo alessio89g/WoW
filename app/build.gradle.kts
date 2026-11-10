@@ -2,7 +2,7 @@ plugins { id("com.android.application"); id("org.jetbrains.kotlin.plugin.compose
 android {
     namespace = "net.alessio.wow"
     compileSdk = 35
-    defaultConfig { applicationId = "net.alessio.wow"; minSdk = 26; targetSdk = 35; testInstrumentationRunner = "net.alessio.wow.SshSmokeInstrumentation"; versionCode = 10; versionName = "0.7.0" }
+    defaultConfig { applicationId = "net.alessio.wow"; minSdk = 26; targetSdk = 35; testInstrumentationRunner = "net.alessio.wow.SshSmokeInstrumentation"; versionCode = 11; versionName = "0.8.0" }
     buildFeatures { compose = true }
     packaging { resources.excludes += setOf("META-INF/versions/**", "META-INF/AL2.0", "META-INF/LGPL2.1") }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }

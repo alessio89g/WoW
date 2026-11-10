@@ -109,4 +109,27 @@
     <string name="runtime_exit">Comando WoL non riuscito (codice %1$d). Verifica utente e interfaccia LAN.</string>
     <string name="language_en">English</string>
     <string name="language_it">Italiano</string>
+    <string name="menu">Menu</string>
+    <string name="language">Lingua</string>
+    <string name="third_party_licenses">Licenze di terze parti</string>
+    <string name="back">Indietro</string>
+    <string name="license_unreadable">Impossibile leggere questa licenza.</string>
+    <string name="updates">Aggiornamenti</string>
+    <string name="update_check">Controlla aggiornamenti</string>
+    <string name="update_feed_unavailable">GitHub non ha una release pubblica disponibile. Il repository potrebbe essere privato o privo di release pubblicate.</string>
+    <string name="update_check_failed">Impossibile verificare gli aggiornamenti. Riprova più tardi.</string>
+    <string name="update_none">Nessun aggiornamento compatibile trovato.</string>
+    <string name="update_available">Aggiornamento disponibile</string>
+    <string name="update_offer">WoW %1$s è disponibile su GitHub. Scaricare l’aggiornamento?</string>
+    <string name="update_download">Scarica</string>
+    <string name="update_later">Più tardi</string>
+    <string name="update_downloading">Download in corso. WoW proporrà l’installazione al termine del download.</string>
+    <string name="update_download_failed">Impossibile scaricare l’aggiornamento.</string>
+    <string name="update_invalid_apk">L’APK non soddisfa i requisiti di package, firma o versione di questa app.</string>
+    <string name="update_install_failed">Impossibile aprire l’installer dell’aggiornamento.</string>
+    <string name="update_ready">Aggiornamento pronto</string>
+    <string name="update_verified">L’APK corrisponde al package e alla firma di WoW e ha una versione più recente. Android chiederà di confermare l’installazione.</string>
+    <string name="update_install">Installa</string>
+    <string name="update_install_permission">Autorizza WoW a installare aggiornamenti nelle impostazioni Android, poi torna all’app e tocca di nuovo Installa.</string>
+    <string name="update_checking">Verifica degli aggiornamenti in corso…</string>
 </resources>

@@ -1,0 +1,9 @@
+Traduzione italiana di cortesia. In caso di difformità fa fede il testo originale inglese.
+
+Licenza jBCrypt
+
+Copyright (c) 2006 Damien Miller <djm@mindrot.org>
+
+Si concede il permesso di usare, copiare, modificare e distribuire il software per qualsiasi scopo, a pagamento o gratuitamente, a condizione che l’avviso di copyright sopra riportato e questo avviso di autorizzazione compaiano in tutte le copie.
+
+Il software è fornito «così com’è». L’autore esclude ogni garanzia relativa al software, comprese le garanzie implicite di commerciabilità e idoneità. L’autore non risponde di danni speciali, diretti, indiretti o consequenziali, né di qualsiasi danno derivante da perdita di uso, dati o profitti, per responsabilità contrattuale, negligenza o altro illecito, derivante da o connesso all’uso o alle prestazioni del software.

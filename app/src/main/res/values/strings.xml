@@ -109,4 +109,27 @@
     <string name="runtime_exit">The WoL command failed (exit code %1$d). Check the user and LAN interface.</string>
     <string name="language_en">English</string>
     <string name="language_it">Italiano</string>
+    <string name="menu">Menu</string>
+    <string name="language">Language</string>
+    <string name="third_party_licenses">Third-party licenses</string>
+    <string name="back">Back</string>
+    <string name="license_unreadable">Could not read this license.</string>
+    <string name="updates">Updates</string>
+    <string name="update_check">Check for updates</string>
+    <string name="update_feed_unavailable">GitHub has no public release available. The repository may be private or have no published releases.</string>
+    <string name="update_check_failed">Could not check for updates. Try again later.</string>
+    <string name="update_none">No compatible update found.</string>
+    <string name="update_available">Update available</string>
+    <string name="update_offer">WoW %1$s is available on GitHub. Download the update?</string>
+    <string name="update_download">Download</string>
+    <string name="update_later">Later</string>
+    <string name="update_downloading">The update is downloading. WoW will offer to install it when the download completes.</string>
+    <string name="update_download_failed">Could not download the update.</string>
+    <string name="update_invalid_apk">The APK does not match this app’s package, signing certificate or version requirements.</string>
+    <string name="update_install_failed">Could not open the update installer.</string>
+    <string name="update_ready">Update ready</string>
+    <string name="update_verified">The APK matches WoW’s package and signing certificate and has a newer version. Android will ask you to confirm the installation.</string>
+    <string name="update_install">Install</string>
+    <string name="update_install_permission">Allow this app to install updates in Android settings, then return to WoW and tap Install again.</string>
+    <string name="update_checking">Checking for updates…</string>
 </resources>

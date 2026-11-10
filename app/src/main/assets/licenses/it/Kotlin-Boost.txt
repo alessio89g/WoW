@@ -1,0 +1,12 @@
+Traduzione italiana di cortesia. In caso di difformità fa fede il testo originale inglese.
+
+Funzioni matematiche di Kotlin JVM derivate dalle funzioni speciali di Boost.
+Copyright Eric Ford e Hubert Holin 2001.
+
+Boost Software License — versione 1.0, 17 agosto 2003
+
+A chiunque, persona o organizzazione, ottenga una copia del software e della documentazione che lo accompagna coperti da questa licenza (il «Software»), si concede gratuitamente il permesso di usare, riprodurre, visualizzare, distribuire, eseguire e trasmettere il Software, creare opere derivate e consentire queste attività a chi riceve il Software, alle condizioni seguenti.
+
+Gli avvisi di copyright presenti nel Software e l’intero presente testo, inclusa la concessione di licenza sopra riportata, questa restrizione e la seguente esclusione di responsabilità, devono essere inclusi in tutte le copie del Software, intere o parziali, e in tutte le opere derivate. Fanno eccezione copie o opere derivate esclusivamente in forma di codice oggetto eseguibile da macchina prodotto da un elaboratore del linguaggio sorgente.
+
+Il Software è fornito «così com’è», senza garanzie espresse o implicite, incluse, a titolo esemplificativo, commerciabilità, idoneità a uno scopo particolare, titolarità e non violazione di diritti. I titolari del copyright e chiunque distribuisca il Software non rispondono di danni o altre responsabilità, contrattuali, extracontrattuali o di altra natura, derivanti dal Software, dal suo uso o da altre operazioni che lo riguardano, o connessi a essi.

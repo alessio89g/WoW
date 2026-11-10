@@ -5,7 +5,7 @@
 
 # WoW
 
-The interface starts in English. Use the **Italiano / English** button on the home screen to switch languages immediately. WoW remembers your choice the next time you open the app.
+The interface starts in English. Open the left-side menu on the home screen and select **Italiano** or **English** to switch languages immediately. **Third-party licenses** shows the bundled license texts in the selected language. WoW remembers your choice the next time you open the app.
 
 WoW is an Android app (`net.alessio.wow`) for Android 8 or later. It uses Material 3 Expressive and displays saved profiles on the home screen.
 
@@ -41,6 +41,12 @@ WoW encrypts profiles with AES-GCM using a non-exportable key in Android Keystor
 ## UDP mode
 
 UDP mode supports local and remote IPv4 addresses and DNS or DDNS names. Each tap sends one standard 102-byte magic packet. The port is configurable and defaults to 9. WoW runs on demand, without polling, a persistent service, or automatic power-on checks.
+
+## Updates
+
+WoW checks [GitHub Releases](https://github.com/alessio89g/WoW/releases) on launch. To check manually, use **Menu → Check for updates** in the left-side panel. A newer public release can offer a download. WoW checks the APK’s package name, signing certificate, and version code before handing it to Android for installation. Android asks you to approve installation and may ask you to allow WoW as an install source.
+
+For the updater, publish a stable release tagged `vX.Y.Z` or `X.Y.Z` with an asset named `WoW-X.Y.Z.apk` or `WoW-X.Y.Z-debug.apk`, signed with the same key and using a higher Android version code. The app reads public release metadata without credentials.
 
 ## Build and test
 

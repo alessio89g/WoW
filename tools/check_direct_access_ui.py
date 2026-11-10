@@ -30,7 +30,7 @@ def wait_text(text):
 
 def tap(text):
     root = wait_text(text)
-    node = next(n for n in root.iter("node") if n.get("text") == text)
+    node = next(n for n in root.iter("node") if n.get("text") == text or n.get("content-desc") == text)
     x1, y1, x2, y2 = map(int, re.findall(r"\d+", node.get("bounds")))
     run("shell", "input", "tap", str((x1+x2)//2), str((y1+y2)//2))
 
@@ -54,8 +54,13 @@ def main():
     before = fixture("ui-key")
     start()
     root = snapshot()
-    if "Italiano" in texts(root):
+    if "Device SSH key" in texts(root):
+        menu = next(n for n in root.iter("node") if n.get("content-desc") == "Menu")
+        x1, y1, x2, y2 = map(int, re.findall(r"\d+", menu.get("bounds")))
+        run("shell", "input", "tap", str((x1+x2)//2), str((y1+y2)//2))
         tap("Italiano")
+        wait_text("Licenze di terze parti")
+        run("shell", "input", "keyevent", "4")
     assert "Profilo SSH prova" in texts(home())
     print("PASS home opens directly with an SSH key profile and no settings button", flush=True)
     tap("Chiave SSH del dispositivo")
