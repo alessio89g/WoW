@@ -5,7 +5,7 @@
 
 # WoW
 
-L’interfaccia parte in inglese. Apri il menu laterale sinistro dalla schermata principale e seleziona **Italiano** o **English**. La lingua cambia subito e WoW ricorda la scelta. Da **Licenze di terze parti** puoi leggere le licenze incluse nell’APK nella lingua selezionata.
+L’interfaccia parte in inglese. Apri il menu laterale sinistro dalla schermata principale e seleziona **Italiano** o **English**. La lingua cambia subito e WoW ricorda la scelta. Da **Licenze** puoi leggere la licenza di WoW e quelle di terze parti nella lingua selezionata. L’ultima voce del menu apre il repository GitHub.
 
 App Android `net.alessio.wow`, Android 8 o successivo, con interfaccia Material 3 Expressive e profili salvati sulla home.
 
@@ -43,7 +43,7 @@ I profili vengono cifrati al salvataggio con AES-GCM e una chiave non esportabil
 
 ## Aggiornamenti
 
-WoW controlla le [release GitHub](https://github.com/alessio89g/WoW/releases) all’avvio. Per un controllo manuale, usa **Menu → Controlla aggiornamenti** nel pannello laterale sinistro. Se trova una release pubblica più recente, propone di scaricarla. Prima di aprire l’installer, WoW verifica package, certificato di firma e codice versione dell’APK. Android chiede la conferma e può chiederti di autorizzare WoW come origine di installazione.
+WoW controlla le [release GitHub](https://github.com/alessio89g/WoW/releases) all’avvio. Per un controllo manuale, usa **Menu → Controlla aggiornamenti** nel pannello laterale sinistro. Se trova una release pubblica più recente, WoW mostra il changelog prima della conferma del download. Prima di aprire l’installer, WoW verifica package, certificato di firma e codice versione dell’APK. Android chiede la conferma e può chiederti di autorizzare WoW come origine di installazione.
 
 Per l’aggiornamento integrato pubblica una release stabile con tag `vX.Y.Z` o `X.Y.Z` e un allegato `WoW-X.Y.Z.apk` o `WoW-X.Y.Z-debug.apk`, firmato con la stessa chiave e con un codice versione Android superiore. L’app legge i metadati pubblici delle release senza credenziali.
 

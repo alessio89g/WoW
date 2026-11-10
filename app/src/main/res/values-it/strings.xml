@@ -132,4 +132,8 @@
     <string name="update_install">Installa</string>
     <string name="update_install_permission">Autorizza WoW a installare aggiornamenti nelle impostazioni Android, poi torna all’app e tocca di nuovo Installa.</string>
     <string name="update_checking">Verifica degli aggiornamenti in corso…</string>
+    <string name="licenses">Licenze</string>
+    <string name="project_license">Licenza</string>
+    <string name="release_notes">Novità della release</string>
+    <string name="release_notes_missing">Nessuna nota fornita per questa release.</string>
 </resources>

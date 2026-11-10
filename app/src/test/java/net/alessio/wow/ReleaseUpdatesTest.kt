@@ -24,6 +24,14 @@ class ReleaseUpdatesTest {
         assertEquals("WoW-0.10.0-debug.apk", update?.name)
     }
 
+    @Test fun attachesNotesFromTheSameReleaseAndHandlesMissingNotes() {
+        val notes = "## Changes\n- New license menu"
+        val update = ReleaseUpdates.parse(release().put("body", notes).withAsset(), "0.9.0")
+        assertEquals(notes, update?.changelog)
+        val noNotes = ReleaseUpdates.parse(release().put("body", JSONObject.NULL).withAsset(), "0.9.0")
+        assertEquals("", noNotes?.changelog)
+    }
+
     @Test fun rejectsOlderDraftOrPrereleaseVersions() {
         assertNull(ReleaseUpdates.parse(release().withAsset(), "0.10.0"))
         assertNull(ReleaseUpdates.parse(release().withAsset(), "0.11.0"))

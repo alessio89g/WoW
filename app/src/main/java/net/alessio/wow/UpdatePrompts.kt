@@ -6,10 +6,17 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import androidx.activity.ComponentActivity
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -126,7 +133,13 @@ internal fun UpdatePrompts(
         AlertDialog(
             onDismissRequest = { available = null },
             title = { Text(label(R.string.update_available)) },
-            text = { Text(label(R.string.update_offer, update.version)) },
+            text = {
+                Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text(label(R.string.update_offer, update.version))
+                    Text(label(R.string.release_notes), style = MaterialTheme.typography.titleSmall)
+                    Text(update.changelog.ifBlank { label(R.string.release_notes_missing) })
+                }
+            },
             confirmButton = {
                 TextButton(onClick = {
                     try {

@@ -13,6 +13,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.LayoutDirection
@@ -30,6 +31,7 @@ internal fun AppMenu(
 ) {
     val drawer = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
+    val uriHandler = LocalUriHandler.current
     var showLicenses by rememberSaveable { mutableStateOf(false) }
 
     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
@@ -53,19 +55,27 @@ internal fun AppMenu(
                             onClick = { setItalian(true) }
                         )
                         HorizontalDivider(Modifier.padding(vertical = 12.dp))
-                    NavigationDrawerItem(
-                        label = { Text(label(R.string.update_check)) },
-                        selected = false,
-                        onClick = { scope.launch { drawer.close(); checkUpdates() } }
-                    )
                         NavigationDrawerItem(
-                            label = { Text(label(R.string.third_party_licenses)) },
+                            label = { Text(label(R.string.update_check)) },
+                            selected = false,
+                            onClick = { scope.launch { drawer.close(); checkUpdates() } }
+                        )
+                        NavigationDrawerItem(
+                            label = { Text(label(R.string.licenses)) },
                             selected = false,
                             onClick = {
                                 scope.launch {
                                     drawer.close()
                                     showLicenses = true
                                 }
+                            }
+                        )
+                        NavigationDrawerItem(
+                            label = { Text("GitHub") },
+                            selected = false,
+                            onClick = {
+                                scope.launch { drawer.close() }
+                                runCatching { uriHandler.openUri(ReleaseUpdates.REPOSITORY_URL) }
                             }
                         )
                     }
@@ -75,7 +85,7 @@ internal fun AppMenu(
             content { scope.launch { drawer.open() } }
         }
     }
-    if (showLicenses) ThirdPartyLicenses(italian) { showLicenses = false }
+    if (showLicenses) Licenses(italian) { showLicenses = false }
 }
 
 @Composable
@@ -103,29 +113,42 @@ private val notices = listOf(
 )
 
 @Composable
-private fun ThirdPartyLicenses(italian: Boolean, onDismiss: () -> Unit) {
+private fun Licenses(italian: Boolean, onDismiss: () -> Unit) {
     var selected by rememberSaveable { mutableStateOf<Int?>(null) }
-    val notice = selected?.let(notices::get)
+    val customSelected = selected == -1
+    val notice = selected?.takeUnless { customSelected }?.let(notices::get)
+    val file = if (customSelected) "WoW.txt" else notice?.second
+    val title = when {
+        customSelected -> label(R.string.project_license)
+        notice != null -> notice.first
+        else -> label(R.string.licenses)
+    }
     AlertDialog(
-        onDismissRequest = { if (notice == null) onDismiss() else selected = null },
-        title = { Text(notice?.first ?: label(R.string.third_party_licenses)) },
+        onDismissRequest = { if (file == null) onDismiss() else selected = null },
+        title = { Text(title) },
         text = {
-            if (notice == null) {
+            if (file == null) {
                 Column(Modifier.verticalScroll(rememberScrollState())) {
+                    Text(label(R.string.project_license), style = MaterialTheme.typography.labelLarge)
+                    TextButton(onClick = { selected = -1 }) {
+                        Text("WoW Non-Commercial Source-Available License 1.1")
+                    }
+                    HorizontalDivider(Modifier.padding(vertical = 8.dp))
+                    Text(label(R.string.third_party_licenses), style = MaterialTheme.typography.labelLarge)
                     notices.forEachIndexed { index, (name, _) ->
                         TextButton(onClick = { selected = index }) { Text(name) }
                     }
                 }
             } else {
                 val locale = if (italian) "it" else "en"
-                key(locale, notice.second) { LicenseText(locale + "/" + notice.second) }
+                key(locale, file) { LicenseText(locale + "/" + file) }
             }
         },
         confirmButton = {
             TextButton(onClick = onDismiss) { Text(label(R.string.close)) }
         },
         dismissButton = {
-            if (notice != null) TextButton(onClick = { selected = null }) { Text(label(R.string.back)) }
+            if (file != null) TextButton(onClick = { selected = null }) { Text(label(R.string.back)) }
         }
     )
 }

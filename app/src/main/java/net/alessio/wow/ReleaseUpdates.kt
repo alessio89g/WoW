@@ -10,10 +10,11 @@ import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
 
-internal data class ReleaseUpdate(val version: String, val url: String, val name: String)
+internal data class ReleaseUpdate(val version: String, val url: String, val name: String, val changelog: String)
 
 internal object ReleaseUpdates {
     private const val REPOSITORY = "alessio89g/WoW"
+    const val REPOSITORY_URL = "https://github.com/$REPOSITORY"
     private const val MAX_RESPONSE = 512 * 1024
     internal const val MAX_APK_BYTES = 64L * 1024 * 1024
     private val versionPattern = Regex("v?(\\d+)\\.(\\d+)\\.(\\d+)")
@@ -33,12 +34,12 @@ internal object ReleaseUpdates {
         val assets = release.optJSONArray("assets") ?: return null
         val version = tag.removePrefix("v")
         for (name in listOf("WoW-$version.apk", "WoW-$version-debug.apk")) {
-            val url = "https://github.com/$REPOSITORY/releases/download/$tag/$name"
+            val url = "$REPOSITORY_URL/releases/download/$tag/$name"
             for (i in 0 until assets.length()) {
                 val asset = assets.optJSONObject(i) ?: continue
                 if (asset.optString("name") == name && asset.optString("browser_download_url") == url &&
                     asset.optLong("size") in 1..MAX_APK_BYTES
-                ) return ReleaseUpdate(tag, url, name)
+                ) return ReleaseUpdate(tag, url, name, (release.opt("body") as? String).orEmpty().trim())
             }
         }
         return null

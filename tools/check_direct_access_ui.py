@@ -59,7 +59,7 @@ def main():
         x1, y1, x2, y2 = map(int, re.findall(r"\d+", menu.get("bounds")))
         run("shell", "input", "tap", str((x1+x2)//2), str((y1+y2)//2))
         tap("Italiano")
-        wait_text("Licenze di terze parti")
+        wait_text("Licenze")
         run("shell", "input", "keyevent", "4")
     assert "Profilo SSH prova" in texts(home())
     print("PASS home opens directly with an SSH key profile and no settings button", flush=True)

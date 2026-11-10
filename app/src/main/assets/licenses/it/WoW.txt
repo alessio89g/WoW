@@ -1,0 +1,59 @@
+Traduzione italiana di cortesia. Fa fede il testo originale inglese.
+
+Licenza WoW a sorgente disponibile per uso non commerciale
+Versione 1.1
+
+Copyright (c) 2026 WoW contributors
+
+Questa è una licenza personalizzata a sorgente disponibile. Non è la MIT, la GPL né un’altra licenza open source approvata dall’OSI. Fa fede il testo inglese.
+
+1. Ambito e definizioni
+
+«Software» indica il codice originale e la documentazione di WoW resi disponibili con questa licenza, comprese le modifiche a quel codice e le opere che ne derivano. I componenti e le risorse di terze parti soggetti a termini separati sono esclusi e conservano le rispettive licenze.
+
+«Non commerciale» significa che l’uso non è inteso né diretto a ottenere un vantaggio commerciale o un compenso monetario. Rientrano nell’uso commerciale la vendita o la concessione a pagamento del Software, la monetizzazione tramite pubblicità, la fornitura come parte di un servizio a pagamento e l’uso o l’integrazione in prodotti, servizi o attività aziendali di natura commerciale. Sono consentiti l’uso personale, la didattica non commerciale e la ricerca non commerciale.
+
+«Sorgente corrispondente» indica la forma completa preferita per modificare l’esatta versione distribuita, incluse tutte le modifiche, i file sorgente, le definizioni delle interfacce, i manifesti e le versioni delle dipendenze, gli script di compilazione e le istruzioni necessarie per compilare e installare quella versione. Il codice offuscato, il risultato della decompilazione o le sole patch sono insufficienti. Non occorre includere gli strumenti di compilazione di uso generale non modificati o le librerie standard di sistema. Occorre identificare gli strumenti e le dipendenze necessari e spiegare come ottenerli. Non sono richiesti chiavi private di firma, credenziali o dati personali.
+
+2. Autorizzazione
+
+A tutte le condizioni seguenti, ciascun titolare dei diritti concede un’autorizzazione mondiale, non esclusiva ed esente da royalty a usare, studiare, copiare, modificare, creare fork e altre opere derivate e redistribuire i propri contributi al Software, esclusivamente per fini non commerciali. I destinatari ricevono le stesse autorizzazioni direttamente da questa licenza. La licenza non concede autorizzazioni per usi commerciali.
+
+3. Redistribuzione, codice sorgente e crediti al progetto originale
+
+Qualunque redistribuzione del Software, modificato o invariato, in forma sorgente o eseguibile, deve restare interamente non commerciale e includere questa licenza per intero e gli avvisi applicabili di copyright, attribuzione, licenza e terze parti.
+
+Qualunque redistribuzione deve attribuire il progetto originale WoW e includere nei crediti l’indirizzo del suo repository:
+
+https://github.com/alessio89g/WoW
+
+L’indirizzo deve essere cliccabile quando il supporto permette collegamenti. Inserisci l’attribuzione nei crediti o nei ringraziamenti esistenti. Se mancano, allega un file CREDITS. L’obbligo vale sia per le versioni modificate sia per quelle invariate. L’indirizzo di un fork da solo è insufficiente.
+
+(a) Versioni invariate
+
+Se redistribuisci una versione senza modifiche al codice sorgente o alle risorse incluse nell’app, compreso un APK ufficiale invariato, basta il link al repository originale nei crediti. Non devi consegnare né ospitare separatamente il Sorgente corrispondente. È inclusa una build per il resto invariata ottenuta dal sorgente originale. Le sole differenze nei metadati generati durante la build o nei certificati di firma non costituiscono una versione modificata. L’aggiunta degli avvisi di licenza e dei crediti richiesti da questa sezione non costituisce una modifica.
+
+(b) Versioni modificate e opere derivate
+
+Se redistribuisci una versione modificata o un’opera derivata, devi:
+
+- includere il Sorgente corrispondente completo con la copia distribuita senza costi aggiuntivi, nello stesso archivio o in un archivio sorgente consegnato insieme a quella copia;
+- concedere le modifiche e le opere derivate secondo questa stessa licenza, senza restrizioni ulteriori sulle autorizzazioni concesse;
+- identificare chiaramente la versione come modificata e descrivere le modifiche, inclusa la data;
+- conservare l’attribuzione e l’indirizzo del repository originale indicati sopra.
+
+Per le versioni modificate, un link al repository originale o a un fork, la promessa di fornire il sorgente più avanti o un’offerta disponibile solo su richiesta non sostituiscono la consegna del Sorgente corrispondente. Se distribuisci solo il sorgente, il sorgente distribuito soddisfa l’obbligo se è completo come definito nella sezione 1.
+
+Puoi mantenere private le modifiche che non redistribuisci. Questo non consente l’uso commerciale delle modifiche private. Le opere indipendenti distribuite semplicemente insieme al Software mantengono le rispettive licenze e non devono adottare questa licenza.
+
+4. Diritti di terze parti e attribuzione
+
+Questa licenza concede diritti soltanto sui contributi che i rispettivi titolari hanno reso disponibili a queste condizioni. Non cambia la licenza di caratteri, icone, immagini, librerie o altri materiali di terze parti soggetti a licenza separata. Devi rispettarne autonomamente i termini. Non sono concessi diritti sui marchi né il diritto di suggerire un avallo.
+
+5. Cessazione
+
+Le autorizzazioni cessano automaticamente se violi le condizioni della licenza. Sono ripristinate se poni rimedio alla violazione entro 30 giorni da quando ne sei venuto a conoscenza per la prima volta, purché tu non abbia già ottenuto un ripristino ai sensi di questa clausola. Negli altri casi il ripristino richiede il permesso dei titolari interessati. La cessazione lascia intatti i diritti propri dei destinatari che rispettano la licenza. Nessuna restrizione limita i diritti che la legge applicabile ti attribuisce indipendentemente dalla licenza.
+
+6. Esclusione di garanzia e limitazione di responsabilità
+
+Nella misura massima consentita dalla legge applicabile, il Software è fornito «così com’è», senza alcuna garanzia, espressa o implicita, comprese, a titolo esemplificativo, le garanzie di commerciabilità, idoneità a uno scopo particolare e non violazione di diritti. Gli autori o i titolari del copyright non rispondono di pretese, danni o altre responsabilità, contrattuali, extracontrattuali o di altra natura, derivanti dal Software, dal suo uso o da altre operazioni che lo riguardano, o connessi a essi.
